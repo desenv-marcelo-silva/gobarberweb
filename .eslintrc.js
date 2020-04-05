@@ -4,7 +4,12 @@ module.exports = {
     jest: true,
     browser: true,
   },
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    'plugin:react-hooks/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -17,7 +22,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
+  plugins: ['react', 'jsx-a11y', 'import', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
@@ -30,9 +35,9 @@ module.exports = {
     'no-underscore-dangle': 'off',
     camelcase: 'off',
     'no-console': ['error', { allow: ['tron'] }],
+    'react/jsx-props-no-spreading': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     'import/resolver': {
