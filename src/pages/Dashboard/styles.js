@@ -30,6 +30,15 @@ export const Container = styled.div`
     grid-gap: 15px;
     margin-top: 10px;
   }
+
+  > button {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+
+    visibility: ${(props) => (props.today ? 'hidden' : 'visible')};
+  }
 `;
 
 export const Time = styled.li`
