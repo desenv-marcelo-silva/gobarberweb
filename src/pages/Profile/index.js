@@ -19,6 +19,7 @@ export default function Profile() {
 
         <hr />
 
+        <Input type="password" name="oldPassword" placeholder="Senha atual" />
         <Input type="password" name="password" placeholder="Nova senha" />
         <Input
           type="password"
