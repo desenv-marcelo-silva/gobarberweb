@@ -36,8 +36,6 @@ export const Container = styled.div`
     border: 0;
     color: #fff;
     font-weight: bold;
-
-    visibility: ${(props) => (props.today ? 'hidden' : 'visible')};
   }
 `;
 
