@@ -18,7 +18,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 import api from '~/services/api';
 
-import { Container, Time } from './styles';
+import { Container, Time, ButtonToday } from './styles';
 
 const rangeHours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
@@ -30,6 +30,8 @@ export default function Dashboard() {
     () => format(date, "d 'de' MMMM", { locale: pt }),
     [date]
   );
+
+  const dayIsAnother = useMemo(() => !isEqual(new Date(), date), [date]);
 
   useEffect(() => {
     async function loadSchedule() {
@@ -83,9 +85,9 @@ export default function Dashboard() {
         </button>
       </header>
 
-      <button type="button" onClick={handleTodayDay}>
+      <ButtonToday onClick={handleTodayDay} showGoToday={dayIsAnother}>
         Ir para hoje
-      </button>
+      </ButtonToday>
 
       <ul>
         {schedule.map((time) => (
