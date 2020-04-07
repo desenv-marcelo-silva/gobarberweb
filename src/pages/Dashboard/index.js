@@ -9,6 +9,7 @@ import {
   setSeconds,
   isBefore,
   parseISO,
+  isSameDay,
 } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
 
@@ -31,7 +32,7 @@ export default function Dashboard() {
     [date]
   );
 
-  const dayIsAnother = useMemo(() => !isEqual(new Date(), date), [date]);
+  const dayIsAnother = useMemo(() => !isSameDay(new Date(), date), [date]);
 
   useEffect(() => {
     async function loadSchedule() {

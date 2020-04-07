@@ -40,7 +40,7 @@ export const ButtonToday = styled.button.attrs({
   color: #fff;
   font-weight: bold;
 
-  display: ${(props) => (props.showGoToday ? 'visible' : 'hidden')};
+  visibility: ${(props) => (props.showGoToday ? 'visible' : 'hidden')};
 `;
 
 export const Time = styled.li`
