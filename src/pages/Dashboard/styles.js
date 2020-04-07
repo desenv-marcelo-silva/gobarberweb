@@ -35,7 +35,7 @@ export const Container = styled.div`
 export const ButtonToday = styled.button.attrs({
   type: 'button',
 })`
-  background: red;
+  background: none;
   border: 0;
   color: #fff;
   font-weight: bold;
